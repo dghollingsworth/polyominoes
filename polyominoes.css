@@ -1,0 +1,42 @@
+
+#buttons li{
+	list-style: none;
+	display: inline;
+}
+
+#container p{
+	line-height: 1;
+}
+
+/* Shell */
+header{
+	padding:5px;
+}
+
+label{
+	font-size: 14pt;
+}
+
+.buttons{
+	margin-bottom: 20px;
+}
+
+/* view window */
+
+#frame{
+	border: 5px solid black;
+	border-radius: 5px;
+	padding: 5px;
+	margin-top: 7px;
+	background-color: #87CEEB;
+}
+.title{
+	font-size: 24pt;
+}
+
+#frame p{
+	font-size: 14pt;
+}
+
+
+
