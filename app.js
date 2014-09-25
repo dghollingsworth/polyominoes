@@ -1,10 +1,16 @@
-
-
+	
 var polyApp = angular.module('polyApp', ['ngRoute']);
+
+polyApp.set('port', (process.env.PORT || 5000))
 
 polyApp.config(function($routeProvider){
 	$routeProvider
 		.when('/',
+			{
+				controller: 'AppController',
+				templateUrl: 'partials/about.html'
+			})
+		.when('/about',
 			{
 				controller: 'AppController',
 				templateUrl: 'partials/about.html'
@@ -59,7 +65,7 @@ polyApp.config(function($routeProvider){
 
 polyApp.controller('AppController', function($scope, $location){
 	$scope.selections = [];
-	var translation = {"1":"monomino", "2":"domino", "3":"tromino", "4":"tetromino", "5":"pentomino", "6":"hexomino", "7":"heptomino", "8":"octomino"};
+	var translation = {"1":"monomino", "2":"domino", "3":"tromino", "4":"tetromino", "5":"pentomino", "6":"hexomino", "7":"heptomino", "8":"octomino", "?":"about"};
 	
 	$scope.addSelection = function(path){
 		var path = $scope.userSelection;
